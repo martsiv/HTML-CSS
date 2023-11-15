@@ -1,37 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vertical menu</title>
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
+            color: white;
         }
-        nav ul{
+
+        nav {
+            width: 220px;
+        }
+
+        nav ul {
             list-style-type: none;
+            margin: 0px;
             padding: 0px;
-            background-color: grey;
         }
-        nav li{
-            width: 200px;
+
+        nav li {
+            height: 80px;
+            background-color: gray;
         }
-        nav img{
+
+        li span {
             display: inline-block;
-            height: 50px;
-            width: 50px;
+            text-align: center;
+            padding: 30px 90px;
+        }
+
+        li#li-edit,
+        li#li-favorites,
+        li#li-history,
+        li#li-security,
+        li#li-settings {
+            background-position: 5% 50%;
+            background-repeat: no-repeat;
+            background-size: 60px;
+        }
+
+        #li-edit {
+            background-image: url(./img/edit.png);
+        }
+
+        #li-favorites {
+            background-image: url(./img/favorites.png);
+        }
+
+        #li-history {
+            background-image: url(./img/history.png);
+        }
+
+        #li-security {
+            background-image: url(./img/security.png);
+        }
+
+        #li-settings {
+            background-image: url(./img/settings.png);
+        }
+
+        nav li:hover {
+            background-color: rgb(78, 78, 78);
         }
     </style>
 </head>
+
 <body>
     <nav>
         <ul>
-            <li><img src="./img/edit.png" alt="EDIT"><span>EDIT</span></li>
-            <li><img src="./img/favorites.png" alt="FAVORITES"><span>FAVORITES</span></li>
-            <li><img src="./img/history.png" alt="HISTORY"><span>HISTORY</span></li>
-            <li><img src="./img/security.png" alt="SECURITY"><span>SECURITY</span></li>
-            <li><img src="./img/settings.png" alt="SETTINGS"><span>SETTINGS</span></li>
+            <li id="li-edit"><span>EDIT</span></li>
+            <li id="li-favorites"><span>FAVORITES</span></li>
+            <li id="li-history"><span>HISTORY</span></li>
+            <li id="li-security"><span>SECURITY</span></li>
+            <li id="li-settings"><span>SETTINGS</span></li>
         </ul>
     </nav>
 </body>
+
 </html>
