@@ -1,68 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food products</title>
+    <title>Vertical menu</title>
     <style>
-        body {
+        body{
             font-family: Arial, Helvetica, sans-serif;
-            padding: 20px 16px;
         }
-        h1{
-            font-size: 14px;
-            text-align: center;
-        }
-        .bold-center-text{
-            font-weight: bold;
-            text-align: center;
-        }
-        ul.custom-list{
-            list-style: none;
+        nav ul{
+            list-style-type: none;
             padding: 0px;
-            margin: 10px;
+            background-color: grey;
         }
-        ul.custom-list li{
+        nav li{
+            width: 200px;
+        }
+        nav img{
             display: inline-block;
-            border-radius: 2px;
-            border-color: gray;
-            border-style: solid;
-            padding: 5px;
-            border-radius: 25%;
-            width: 100px;
-            text-align: center;
+            height: 50px;
+            width: 50px;
         }
     </style>
 </head>
-
 <body>
-<h1>
-    What do I have in my fridge?
-</h1>
-<ul class="custom-list">
-    <li>
-        <img src="./img/Food_C203-128.png" alt="Eggs">
-        <span>
-            Eggs
-        </span> 
-    </li>
-    <li>Apple</li>
-    <li>Cheese</li>
-    <li>Corn</li>
-    <li>Mushroom</li>
-    <li>Garlic</li>
-    <li>Beef</li>
-    <li>Fish</li>
-    <li>
-        Pepper
-    </li>
-    <li>Coriander</li>
-</ul>
-<hr>
-<p class="bold-center-text">
-    ... that's all ...
-</p>
+    <nav>
+        <ul>
+            <li><img src="./img/edit.png" alt="EDIT"><span>EDIT</span></li>
+            <li><img src="./img/favorites.png" alt="FAVORITES"><span>FAVORITES</span></li>
+            <li><img src="./img/history.png" alt="HISTORY"><span>HISTORY</span></li>
+            <li><img src="./img/security.png" alt="SECURITY"><span>SECURITY</span></li>
+            <li><img src="./img/settings.png" alt="SETTINGS"><span>SETTINGS</span></li>
+        </ul>
+    </nav>
 </body>
-
 </html>
