@@ -1,11 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Table</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+            text-align: center;
+            margin: 0 auto;
+            width: 90%;
+            border-radius: 10px;
+            min-width: 650px;
+            max-width: 800px;
+        }
+       
+        th{
+            padding: 20px 10px;
+            color: white;
+        }
+        td{
+            text-align: center;
+            padding: 15px 20px;
+        }
+        tbody td:first-child{
+            text-align: left;
+        }
+        tbody tr:nth-child(2n){
+            background-color: rgb(240, 240, 240);
+        }
+        tbody tr:nth-child(2n +1){
+            background-color: rgb(197, 196, 196);
+        }
+        tbody td:nth-child(2n +1){
+            background-color: rgba(0, 0, 0, 10%);
+        }
+        th:first-child{
+            background-color: rgb(69, 69, 182);
+        }
+        th:nth-child(2){
+            background-color: rgb(52, 52, 138);
+        }
+        th:nth-child(3){
+            background-color: rgb(42, 42, 109);
+        }
+        th:nth-child(4){
+            background-color: rgb(28, 28, 77);
+        }
+        th:last-child{
+            background-color: rgb(14, 14, 36);
+        }
+        th span{
+            display: inline-block;
+            font-size: 28px;
+            margin: 5px 0px;
+        }
+        .col-1, .col-2, .col-3, .col-4, .col-5 {
+            width: auto;
+        }
+        tbody:last-child span{
+            display: inline-block;
+            background-color: rgb(138, 137, 137);
+            padding: 8px 20px;
+        }
+        </style>
 </head>
+
 <body>
-    
+    <table>
+        <colgroup>
+            <col class="col-1">
+            <col class="col-2">
+            <col class="col-3">
+            <col class="col-4">
+            <col class="col-5">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Choose your plan</th>
+                <th>starter <br><br><span>$10</span><br>per month</th>
+                <th>econom <br><br><span>$30</span><br>per month</th>
+                <th>standart <br><br><span>$59</span><br>per month</th>
+                <th>professional <br><br><span>$99</span><br>per month</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Amount of space</td>
+                <td>20GB</td>
+                <td>40GB</td>
+                <td>110GB</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>Bandwidth per month</td>
+                <td>120GB</td>
+                <td>240GB</td>
+                <td>610GB</td>
+                <td>1200GB</td>
+            </tr>
+            <tr>
+                <td>Email accounts</td>
+                <td>1</td>
+                <td>15</td>
+                <td>60</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>MySQL databases</td>
+                <td>1</td>
+                <td>15</td>
+                <td>60</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>25h support</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Support tickets per month</td>
+                <td>2</td>
+                <td>6</td>
+                <td>14</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <span>
+                        START
+                    </span>
+                </td>
+                <td>
+                    <span>
+                        START
+                    </span>
+                </td>
+                <td>
+                    <span>
+                        START
+                    </span>
+                </td>
+                <td>
+                    <span>
+                        START
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </body>
+
 </html>
