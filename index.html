@@ -4,203 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tables</title>
+    <title>Positions</title>
     <style>
-        body {
+        body{
             font-family: Arial, Helvetica, sans-serif;
-            margin: 0px;
-            padding: 0px;
-        }
-
-        main {
-            width: 90%;
-            margin: 70px auto;
-        }
-
-        nav {
-            display: block;
-            background-color: rgb(171, 21, 21);
-            color: white;
-            overflow: hidden;
-            margin: 0px;
-            padding: 0px 5%;
-            position: fixed;
-            top: 0;
-            width: 100%;
-
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding-left: 0;
-            display: inline-block;
-            margin: 0px;
-            padding: 0px;
-        }
-
-        nav ul li {
-            margin: 0px;
-            display: inline-block;
-        }
-
-        nav a {
-            margin: 0px;
-            display: inline-block;
-            color: white;
-            padding: 20px 16px;
             text-align: center;
-            text-decoration: none;
-            height: 15px;
         }
-
-        nav a:hover {
-            background-color: rgb(115, 25, 25);
-            color: white;
-        }
-
-        nav a:visited {
-            color: white;
-        }
-
-        .navbar {
-            display: inline-block;
-            padding-right: 30px;
+        table{
+            border-collapse:collapse;
+            width: 1000px;
             margin: 0px;
         }
-        article.main-text{
-            display: inline-block;
-            width: 60%;
-            text-align: center;
-         
+        th, td{
+            padding: 6px 10px;
         }
-        article.main-text p{
-            text-align: justify;
+        table tr:first-child, th:first-child{
+            background-color: rgb(112, 205, 234);
         }
-        article.short-info {
-            display: inline-block;
-            width: 38%;
-            text-align: center;
-            vertical-align: top;
+        table tr:first-child{
+            position: sticky;
+            top: 0px;
         }
-        
+        table th:first-child{
+            position: sticky;
+            left: 0px;
+        }
+        table tr:nth-child(odd) td
+        {
+            background-color: gray;
+        }
     </style>
 </head>
 
 <body>
-    <nav>
-        <span class="navbar">
-            WRITERS
-        </span>
-        <ul>
-            <li><a href="#discussions">Discussions</a></li>
-            <li><a href="#books">Books</a></li>
-            <li><a href="#authors">The authors</a></li>
-            <li><a href="readers">Readers</a></li>
-        </ul>
-    </nav>
-    <main>
-
-        <h1>
-            William Shakespeare
-        </h1>
-        <hr>
-
-        <span>
-            From Wikipedia, the free encyclopedia
-        </span>
-        <div>
-
-            <article class="main-text">
-                <p>
-                    William Shakespeare (bapt. 26 April 1564 – 23 April 1616) was an English poet, playwright and actor,
-                    widely
-                    regarded as the greatest writer in the English language and the world's greatest dramatist. He is often
-                    called England's national poet and the "Bard of Avon". His extant works, including collaborations,
-                    consist
-                    of approximately 39 plays, 154 sonnets, two long narrative poems, and a few other verses, some of
-                    uncertain
-                authorship. His plays have been translated into every major living language and are performed more often
-                than those of any other playwright.
-            </p>
-            
-            <p>
-                Shakespeare was born and raised in Stratford-upon-Avon, Warwickshire. At the age of 18, he married Anne
-                Hathaway, with whom he had three children: Susanna and twins Hamnet and Judith. Sometime between 1585
-                and
-                1592, he began a successful career in London as an actor, writer, and part-owner of a playing company
-                called
-                the Lord Chamberlain's Men, later known as the King's Men. At age 49 (around 1613), he appears to have
-                retired to Stratford, where he died three years later. Few records of Shakespeare's private life
-                survive;
-                this has stimulated considerable speculation about such matters as his physical appearance, his
-                sexuality,
-                his religious beliefs, and whether the works attributed to him were written by others. Such theories are
-                often criticised for failing to adequately note that few records survive of most commoners of the
-                period.
-            </p>
-            
-            <p>
-                Shakespeare produced most of his known works between 1589 and 1613. His early plays were primarily
-                comedies
-                and histories and are regarded as some of the best work produced in these genres. Until about 1608, he
-                wrote
-                mainly tragedies, among them Hamlet, Othello, King Lear, and Macbeth, all considered to be among the
-                finest
-                works in the English language. In the last phase of his life, he wrote tragicomedies (also known as
-                romances) and collaborated with other playwrights.
-            </p>
-            
-            <p>
-                Many of Shakespeare's plays were published in editions of varying quality and accuracy in his lifetime.
-                However, in 1623, two fellow actors and friends of Shakespeare's, John Heminges and Henry Condell,
-                published
-                a more definitive text known as the First Folio, a posthumous collected edition of Shakespeare's
-                dramatic
-                works that included all but two of his plays. The volume was prefaced with a poem by Ben Jonson, in
-                which
-                Jonson presciently hails Shakespeare in a now-famous quote as "not of an age, but for all time".
-            </p>
-
-            <p>
-                Throughout the 20th and 21st centuries, Shakespeare's works have been continually adapted and
-                rediscovered
-                by new movements in scholarship and performance. His plays remain popular and are studied, performed,
-                and
-                reinterpreted through various cultural and political contexts around the world.
-            </p>
-        </article>
-
-        
-        <article class="short-info">
-            <img src="./icon_practice/shakespeare.jpg" alt="Shakespeare" width="auto">
-            
-            Born
-            26 April 1564
-            
-            Died
-            23 April 1616
-            
-            Spouse
-            Anne Hathaway (m. 1582)
-            
-            Children
-            Susanna Hall
-            Hamnet Shakespeare
-            Judith Quiney
-            
-            Parents
-            John Shakespeare (father)
-            Mary Arden (mother)
-        </article>
-    </div>
-        
-        <h2>
-            Similar authors:
-        </h2>
-
-
-    </main>
+    <table>
+        <tr>
+            <th></th>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+            <th>Header 4</th>
+            <th>Header 5</th>
+        </tr>
+        <tr>
+            <th>Line 1</th>
+            <td>23</td>
+            <td>123</td>
+            <td>43</td>
+            <td>12</td>
+            <td>76</td>
+        </tr>
+        <tr>
+            <th>Line 2</th>
+            <td>23</td>
+            <td>123</td>
+            <td>43</td>
+            <td>12</td>
+            <td>76</td>
+        </tr>
+        <tr>
+            <th>Line 3</th>
+            <td>432</td>
+            <td>64</td>
+            <td>23</td>
+            <td>53</td>
+            <td>52</td>
+        </tr>
+        <tr>
+            <th>Line 4</th>
+            <td>75</td>
+            <td>29</td>
+            <td>62</td>
+            <td>52</td>
+            <td>52</td>
+        </tr>
+        <tr>
+            <th>Line 5</th>
+            <td>53</td>
+            <td>42</td>
+            <td>16</td>
+            <td>36</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <th>Line 6</th>
+            <td>74</td>
+            <td>73</td>
+            <td>54</td>
+            <td>30</td>
+            <td>92</td>
+        </tr>
+        <tr>
+            <th>Line 7</th>
+            <td>83</td>
+            <td>52</td>
+            <td>48</td>
+            <td>65</td>
+            <td>96</td>
+        </tr>
+        <tr>
+            <th>Line 8</th>
+            <td>80</td>
+            <td>21</td>
+            <td>83</td>
+            <td>27</td>
+            <td>85</td>
+        </tr>
+    </table>
 </body>
 
 </html>
