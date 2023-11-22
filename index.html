@@ -1,68 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flex-box-1</title>
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            font-weight: bold;
-            color: white;
         }
-        .main-div{
-            display: grid;
-            background-color: darkblue;
-            border-radius: 5px;
-            padding: 10px;
-            grid-template-columns: 1fr 4fr 1fr;
-            grid-template-rows: 50px 300px 80px;
-            gap: 8px;
-        }
-        .main-div div{
-            border-radius: 5px;
-            padding: 0.3em;
+        .container{
+            height: 600px;
             display: flex;
-            align-items: center;
+            box-sizing: border-box;
+            gap: 10px;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-evenly;
         }
-        .item-1{
-            display: flex;
-            grid-column: span 3;
-            background-color: rgb(212, 50, 50);
-            gap: 15px;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .search-div{
-            margin-right: auto;
-        }
-        .item-2{
-            background-color: rgb(170, 170, 20);
-        }
-        .item-3{
-            background-color: rgb(43, 126, 194);
-        }
-        .item-4{
-            background-color: rgb(27, 128, 101);
-        }
-        .item-5{
-            grid-column: span 3;
-            background-color: rgb(76, 50, 99);
+        .container div{
+            width: 33%;
         }
     </style>
 </head>
+
 <body>
-    <div class="main-div">
-        <div class="item-1">
-            <div class="home-div">HOME</div>
-            <div class="search-div">SEARCH</div>
-            <div class="logout-div">LOGOUT</div>
+    <div class="container">
+        <div>
+            <img src="./img/350x150.png">
+
         </div>
-        <div class="item-2">MENU</div>
-        <div class="item-3">CONTENT</div>
-        <div class="item-4">RIGHT</div>
-        <div class="item-5">FOOTER</div>
+        <div>
+            <img src="./img/350x220.png">
+
+        </div>
+        <div>
+            <img src="./img/350x100.png">
+            
+        </div>
+        <div>
+            <img src="./img/350x100.png">
+            
+        </div>
+        <div>
+            <img src="./img/350x230.png">
+            
+        </div>
+        <div>
+            <img src="./img/350x150.png">
+            
+        </div>
+        <div>
+            <img src="./img/350x100.png">
+            
+        </div>
+        <div>
+            <img src="./img/350x350.png">
+            
+        </div>
+        <div>
+            <img src="./img/350x150.png">
+
+        </div>
     </div>
 </body>
+
 </html>
