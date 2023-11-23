@@ -4,101 +4,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex-box-1</title>
+    <title>Extra task flex box/grid</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: rgb(126, 205, 205);
+            background-color: rgb(100, 100, 100);
+            color: white;
+        }
+
+        header {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header>div {
+            display: flex;
+        }
+
+        /* Personal info */
+        .personal-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-left: 20px;
+        }
+
+        .personal-info * {
+            margin: 0px;
             padding: 0px;
         }
 
-        h2 {
-            font-size: 14px;
-            align-items: flex-start;
+        .personal-info strong {
+            font-size: 20px;
         }
 
-        .container {
+        .personal-info div {
+            font-size: 18px;
+        }
+
+        /* Navigation menu */
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav li {
+            display: inline-block;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        /* First block "About me" */
+        .div-about-me {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            box-sizing: border-box;
-            gap: 10px;
-            padding: 16px;
-        }
-
-        div.column {
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            row-gap: 15px;
-        }
-
-        div.card{
-            background-color: white;
-        }
-        .card img{
-            width: 100%;
-        }
-
-        .card h2, p{
-            padding: 5px;
-            margin: 0px;
+            grid-template-columns: 1fr, 1fr, 1fr;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="column">
-            <div class="card">
-                <img src="./img/350x150.png">
-                <h2>Title</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque magni, obcaecati sint voluptate
-                    perferendis recusandae molestiae. Mollitia natus fugit distinctio modi.</p>
-            </div>
-            <div class="card">
-                <img src="./img/350x220.png">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            </div>
-            <div class="card">
-                <img src="./img/350x100.png">
-                <h2>Title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita delectus nobis fugit, ex sunt iusto sit?</p>
+    <header>
+        <div>
+            <img src="./img/camera.png" alt="camera">
+            <div class="personal-info">
+                <div>
+                    <strong>Julia Jacobson</strong>
+                </div>
+                <div>The Photographer</div>
             </div>
         </div>
-        <div class="column">
-            <div class="card">
-                <img src="./img/350x100.png">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi mollitia obcaecati ea suscipit labore voluptatibus saepe. Repellat, laborum debitis?</p>
-            </div>
-            <div class="card">
-                <img src="./img/350x230.png">
-                <h2>The Title</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, unde. Eos illo doloribus eius culpa! Aliquam omnis quae temporibus porro fuga asperiores commodi officiis.</p>
-            </div>
-            <div class="card">
-                <img src="./img/350x150.png">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde cumque nam sit iusto ex ut accusamus.</p>
-            </div>
-
+        <div>
+            <nav>
+                <ul>
+                    <li><a href=""></a>About</li>
+                    <li><a href=""></a>Works</li>
+                    <li><a href=""></a>Instagramm</li>
+                </ul>
+            </nav>
         </div>
-        <div class="column">
-            <div class="card">
-                <img src="./img/350x100.png">
-                <h2>The Title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ipsa voluptates, error expedita aut voluptatum dignissimos harum alias.</p>
-            </div>
-            <div class="card">
-                <img src="./img/350x350.png">
-                <h2>The Title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ipsa voluptates, error expedita aut voluptatum dignissimos harum alias.</p>
-            </div>
-            <div class="card">
-                <img src="./img/350x150.png">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam eveniet dolor totam. Officiis!</p>
-            </div>
+    </header>
 
+    <div>
+        <h2>About Me</h2>
+        <div class="div-about-me">
+            <img src="./img/img1small.jpg" alt="img">
+            <div>text</div>
+            <div>text</div>
         </div>
     </div>
+
+    <div>
+        <h2>My Last Works</h2>
+        <div class="last-works-div">
+            <img src="./img/img2small.jpg" alt="img">
+            <img src="./img/img3small.jpg" alt="img">
+            <img src="./img/img4mediul.jpg" alt="img">
+            <img src="./img/img5medium.jpg" alt="img">
+            <img src="./img/img6medium.jpg" alt="img">
+            <img src="./img/img7medium.jpg" alt="img">
+        </div>
+    </div>
+
+    <div>
+        <h2>Follow me on instagram</h2>
+        <div class="insta-photos-div">
+            <img src="./img/inst1.jpg" alt="img">
+            <img src="./img/inst2.jpg" alt="img">
+            <img src="./img/inst3.jpg" alt="img">
+            <img src="./img/inst4.jpg" alt="img">
+            <img src="./img/inst5.jpg" alt="img">
+            <img src="./img/inst6.jpg" alt="img">
+        </div>
+    </div>
+
+    <footer>
+        <p>© Copyright 2018-2020 Julia Jacobson</p>
+    </footer>
 </body>
 
 </html>
