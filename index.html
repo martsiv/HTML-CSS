@@ -5,10 +5,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex Task 2</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px 0px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .message-block{
+            display: flex;
+            margin: 0px 15px;
+        }
+        .message-info{
+            display: flex;
+            width: 15%;
+            justify-content: flex-end;
+            align-items: center;
+            min-width: 100px;
+        }
+        .message-body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 70%;
+            padding: 10px;
+        }
+        .message-time{
+            font-size: 10px;
+            color: gray;
+        }
+        .text-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .message-block img{
+            height: 50px;
+        }
+        .right, .right>.message-info{
+            flex-direction: row-reverse;
+        }
+        
+        .left .message-body{
+            background-color: rgb(255,182,193);
+            margin-right: 15%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .right .message-body{
+            background-color: rgb(173,216,229);
+            margin-left: 15%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+    </style>
 </head>
 
 <body>
+    <div class="container">
+        <div class="message-block left">
+            <div class="message-info">
+                <div class="text-info">
+                    <div class="full-name">
+                        Anie Smith
+                    </div>
+                    <div class="message-time">
+                        4 hours ago
+                    </div>
+                </div>
+                <img src="./img/avatar_2.png">
+            </div>
+            <div class="message-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+            </div>
+        </div>
 
+        <div class="message-block right">
+            <div class="message-info">
+                <div class="text-info">
+                    <div class="full-name">
+                        Jack Silveston
+                    </div>
+                    <div class="message-time">
+                        4 hours ago
+                    </div>
+                </div>
+                <img src="./img/avatar_1.png">
+            </div>
+            <div class="message-body">
+                Lorem ipsum dolor sit amet consectetur.
+            </div>
+        </div>
+
+        <div class="message-block left">
+            <div class="message-info">
+                <div class="text-info">
+                    <div class="full-name">
+                        Anie Smith
+                    </div>
+                    <div class="message-time">
+                        4 hours ago
+                    </div>
+                </div>
+                <img src="./img/avatar_2.png">
+            </div>
+            <div class="message-body">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+
+        <div class="message-block right">
+            <div class="message-info">
+                <div class="text-info">
+                    <div class="full-name">
+                        Jack Silveston
+                    </div>
+                    <div class="message-time">
+                        3 hours ago
+                    </div>
+                </div>
+                <img src="./img/avatar_1.png">
+            </div>
+            <div class="message-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem?
+            </div>
+        </div>
+
+        <div class="message-block left">
+            <div class="message-info">
+                <div class="text-info">
+                    <div class="full-name">
+                        Anie Smith
+                    </div>
+                    <div class="message-time">
+                        3 hours ago
+                    </div>
+                </div>
+                <img src="./img/avatar_2.png">
+            </div>
+            <div class="message-body">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, tempore!
+            </div>
+        </div>
+
+        <div class="message-block right">
+            <div class="message-info">
+                <div class="text-info">
+                    <div class="full-name">
+                        Jack Silveston
+                    </div>
+                    <div class="message-time">
+                        2 hours ago
+                    </div>
+                </div>
+                <img src="./img/avatar_1.png">
+            </div>
+            <div class="message-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
