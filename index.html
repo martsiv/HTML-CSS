@@ -4,120 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex Task 3</title>
+    <title>Document</title>
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
-            margin: 0px;
-            padding: 0px;
-            background-color: rgb(77, 156, 151);
-        }
-        header{
-            background-color: rgb(57, 134, 129);
-            padding: 15px 30px;
-            position: relative;
-            height: 40px;
-        }
-        h1{
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            text-transform: uppercase;
-            position: absolute;
-        }
-        h2{
-            margin: 0px;
+            background-color: RGB(227, 93, 68);
             padding: 0px;
         }
-        main{
-            overflow-x: scroll;
-            display: flex;
-            justify-content: space-evenly;
-            box-sizing: border-box;
+        .black-shadow{
+            -webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.75);
         }
-        main .div-board{
-            min-width: 300px;
-            max-width: 400px;
-            background-color: rgb(208, 208, 208);
-            height: 85vh;
-            margin: 20px;
-            padding: 20px;
-            box-sizing: border-box;
-            border-radius: 10px;
-        }
-        .div-task{
-            background-color: white;
-            border-radius: 5px;
-            margin-top: 5px;
-            padding: 15px;
+        main {
+            margin: 20px 15%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            gap: 20px;
         }
-        .task-footer, .footer-icons{
-            border: 2px black solid;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            text-align: center;
+            gap: 20px;
+            background-color: rgb(193, 193, 193);
+        }
+
+        h2 {
+            margin: 0px 0px 10px;
+        }
+
+        form input {
+            height: 35px;
+            border: 0px;
+        }
+
+        form input::placeholder {
+            text-align: center;
+            font-weight: bold;
+            color: rgb(193, 193, 193);
+        }
+
+        .fb-twtr {
             display: flex;
             justify-content: space-between;
         }
-        
-        .footer-icons img{
-            display: block;
-            height: 14px;
+
+        .text-div {
+            text-align: center;
+        }
+
+        #login-btn {
+            -webkit-box-shadow: 0px 4px 0px 0px rgba(8, 119, 43, 1);
+            -moz-box-shadow: 0px 4px 0px 0px rgba(8, 119, 43, 1);
+            box-shadow: 0px 4px 0px 0px rgba(8, 119, 43, 1);
+            background-color: rgb(50, 167, 91);
+            border: 0;
+            height: 35px;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: brown;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .text-div{
+            color: white;
+        }
+        .fb-twtr button{
+            height: 35px;
+            color: white;
+            border: 0;
+            width: 48%;
+        }
+        #fb-btn{
+            background-color: RGB(58,91,160);
+        }
+        #twtr-btn{
+            background-color: RGB(28,182,235);
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>
-            My boards
-        </h1>
-    </header>
     <main>
-        <div class="div-board">
-            <h2>To Do</h2>
-            <div class="div-task">
-                <div class="task-text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, excepturi quod.
-                </div>
-                <div class="task-footer">
-                    <div class="footer-icons">
-                        <img src="./img/justify_26.png" alt="justify_26.png">
-                        <img src="./img/checkbox_26.png" alt="checkbox_26.png">
-                        <div>4/8</div>
-                        <img src="./img/attach_26.png" alt="attach_26.png">
-                        <div>2</div>
-                        <img src="./img/comments_26.png" alt="comments_26.png">
-                        <div>4</div>
-                    </div>
-                    <div class="footer-photo">
-                        <img src="./img/avatar_1.png">
-                    </div>
-                </div>
-            </div>
+        <form action="#" class="black-shadow">
+            <h2>Member Login</h2>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button id="login-btn" type="submit">Login</button>
+            <a href="#">Forgot password?</a>
+        </form>
+        <div class="text-div">
+            ... or log in with:
         </div>
-
-        <div class="div-board">
-            <h2>To Do</h2>
-            <div class="div-task">
-                <div class="task-text">
-
-                </div>
-                <div class="task-footer">
-                    <div class="footer-icons">
-                        <img src="./img/justify_26.png" alt="justify_26.png">
-                        <img src="./img/checkbox_26.png" alt="checkbox_26.png">
-                        <div>4/8</div>
-                        <img src="./img/attach_26.png" alt="attach_26.png">
-                        <div>2</div>
-                        <img src="./img/comments_26.png" alt="comments_26.png">
-                        <div>4</div>
-                    </div>
-                    <div class="footer-photo">
-                        <img src="./img/avatar_1.png">
-                    </div>
-                </div>
-            </div>
+        <div class="fb-twtr">
+            <button id="fb-btn" type="button" class="black-shadow">
+                <span>Facebook</span>
+            </button>
+            <button id="twtr-btn" type="button" class="black-shadow">
+                <span>Twitter</span>
+            </button>
         </div>
     </main>
 </body>
