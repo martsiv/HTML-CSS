@@ -4,113 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Forms</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: RGB(227, 93, 68);
-            padding: 0px;
-        }
-        .black-shadow{
-            -webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.75);
-            box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.75);
-        }
-        main {
-            margin: 20px 15%;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+            padding: 0;
+            color: white;
+            background-image: url("./img/soliman-cifuentes-dBBWHl7GAL4-unsplash1.jpg");
         }
 
         form {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            text-align: center;
-            gap: 20px;
-            background-color: rgb(193, 193, 193);
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            margin: 30px 50px;
+            -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+            padding: 5%;
+            gap: 10px
         }
 
         h2 {
-            margin: 0px 0px 10px;
+            margin: 0;
+            grid-column: span 2;
         }
-
-        form input {
-            height: 35px;
-            border: 0px;
-        }
-
-        form input::placeholder {
-            text-align: center;
-            font-weight: bold;
-            color: rgb(193, 193, 193);
-        }
-
-        .fb-twtr {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .text-div {
-            text-align: center;
-        }
-
-        #login-btn {
-            -webkit-box-shadow: 0px 4px 0px 0px rgba(8, 119, 43, 1);
-            -moz-box-shadow: 0px 4px 0px 0px rgba(8, 119, 43, 1);
-            box-shadow: 0px 4px 0px 0px rgba(8, 119, 43, 1);
-            background-color: rgb(50, 167, 91);
-            border: 0;
-            height: 35px;
-            color: white;
-        }
-        a{
-            text-decoration: none;
-            color: brown;
-            font-size: 12px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .text-div{
-            color: white;
-        }
-        .fb-twtr button{
-            height: 35px;
-            color: white;
-            border: 0;
-            width: 48%;
-        }
-        #fb-btn{
-            background-color: RGB(58,91,160);
-        }
-        #twtr-btn{
-            background-color: RGB(28,182,235);
+        form div:first-child(){
+            grid-column: span 2;
         }
     </style>
 </head>
 
 <body>
-    <main>
-        <form action="#" class="black-shadow">
-            <h2>Member Login</h2>
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
-            <button id="login-btn" type="submit">Login</button>
-            <a href="#">Forgot password?</a>
-        </form>
-        <div class="text-div">
-            ... or log in with:
+    <form action="#">
+        <h2>Contact form</h2>
+        <div>Please fill in your information and we'll be sending your order.</div>
+        <div></div>
+        <div>Your name</div>
+        <div class="fullname-div">
+            <input type="text" placeholder="first name">
+            <input type="text" placeholder="last name">
         </div>
-        <div class="fb-twtr">
-            <button id="fb-btn" type="button" class="black-shadow">
-                <span>Facebook</span>
-            </button>
-            <button id="twtr-btn" type="button" class="black-shadow">
-                <span>Twitter</span>
-            </button>
+        <div>Your email</div>
+        <div class="email-div">
+            <input type="email" placeholder="your_mail@mail.com">
         </div>
-    </main>
+        <div>Phone*</div>
+        <div class="phone-div">
+            <input type="number" minlength="3" maxlength="3" placeholder="000">
+            <input type="number" minlength="3" maxlength="3" placeholder="000">
+            <input type="number" minlength="4" maxlength="4" placeholder="0000">
+        </div>
+        <div>Message subject*</div>
+        <div>
+            <input type="text">
+        </div>
+        <div>Message*</div>
+        <div>
+            <input type="text">
+        </div>
+        <div>
+            <hr>
+        </div>
+        <div></div>
+        <div></div>
+        <button id="submit-btn" type="submit">Submit</button>
+    </form>
 </body>
 
 </html>
