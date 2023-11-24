@@ -6,120 +6,411 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex Task 3</title>
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0px;
             padding: 0px;
             background-color: rgb(77, 156, 151);
+
         }
-        header{
+        .general-div{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
             background-color: rgb(57, 134, 129);
             padding: 15px 30px;
             position: relative;
-            height: 40px;
+            height: 70px;
+            box-sizing: border-box;
+            flex-grow: 0;
+            flex-shrink: 0;
         }
-        h1{
+
+        h1 {
             color: white;
             font-size: 16px;
             font-weight: bold;
             text-transform: uppercase;
             position: absolute;
         }
-        h2{
+
+        h2 {
             margin: 0px;
             padding: 0px;
         }
-        main{
-            overflow-x: scroll;
+
+        main {
+            overflow-y: hidden;
+            overflow-x: auto;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            padding-left: 20px;
+            flex-grow: 1;
         }
-        main .div-board{
+
+        main .div-board {
             min-width: 300px;
             max-width: 400px;
             background-color: rgb(208, 208, 208);
-            height: 85vh;
-            margin: 20px;
+            margin: 20px 20px 20px 0px;
             padding: 20px;
             box-sizing: border-box;
             border-radius: 10px;
         }
-        .div-task{
+
+        .div-board {
+            flex-grow: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .div-task {
             background-color: white;
             border-radius: 5px;
             margin-top: 5px;
-            padding: 15px;
+            padding: 12px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            gap: 10px;
         }
-        .task-footer, .footer-icons{
-            border: 2px black solid;
+
+        .task-footer {
             display: flex;
             justify-content: space-between;
         }
-        
-        .footer-icons img{
+
+        .footer-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-icons img {
             display: block;
             height: 14px;
+        }
+
+        .footer-photo img {
+            height: 35px;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>
-            My boards
-        </h1>
-    </header>
-    <main>
-        <div class="div-board">
-            <h2>To Do</h2>
-            <div class="div-task">
-                <div class="task-text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, excepturi quod.
-                </div>
-                <div class="task-footer">
-                    <div class="footer-icons">
-                        <img src="./img/justify_26.png" alt="justify_26.png">
-                        <img src="./img/checkbox_26.png" alt="checkbox_26.png">
-                        <div>4/8</div>
-                        <img src="./img/attach_26.png" alt="attach_26.png">
-                        <div>2</div>
-                        <img src="./img/comments_26.png" alt="comments_26.png">
-                        <div>4</div>
+    <div class="general-div">
+
+
+        <header>
+            <h1>
+                My boards
+            </h1>
+        </header>
+        <main>
+            <div class="div-board">
+                <h2>To Do</h2>
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, excepturi quod.
                     </div>
-                    <div class="footer-photo">
-                        <img src="./img/avatar_1.png">
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/checkbox_26.png" alt="checkbox_26.png">
+                            <div>4/8</div>
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>2</div>
+                            <img src="./img/comments_26.png" alt="comments_26.png">
+                            <div>4</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_1.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus!
+                    </div>
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/checkbox_26.png" alt="checkbox_26.png">
+                            <div>0/3</div>
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>7</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_1.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aperiam consequuntur illo?
+                    </div>
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>1</div>
+                            <img src="./img/comments_26.png" alt="comments_26.png">
+                            <div>1</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_1.png">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="div-board">
-            <h2>To Do</h2>
-            <div class="div-task">
-                <div class="task-text">
-
-                </div>
-                <div class="task-footer">
-                    <div class="footer-icons">
-                        <img src="./img/justify_26.png" alt="justify_26.png">
-                        <img src="./img/checkbox_26.png" alt="checkbox_26.png">
-                        <div>4/8</div>
-                        <img src="./img/attach_26.png" alt="attach_26.png">
-                        <div>2</div>
-                        <img src="./img/comments_26.png" alt="comments_26.png">
-                        <div>4</div>
+            <div class="div-board">
+                <h2>In Progress</h2>
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. At atque dicta dolorum doloribus!
                     </div>
-                    <div class="footer-photo">
-                        <img src="./img/avatar_1.png">
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/checkbox_26.png" alt="checkbox_26.png">
+                            <div>4/8</div>
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>2</div>
+                            <img src="./img/comments_26.png" alt="comments_26.png">
+                            <div>4</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, veritatis!
+                    </div>
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>2</div>
+                            <img src="./img/comments_26.png" alt="comments_26.png">
+                            <div>14</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aperiam consequuntur illo?
+                    </div>
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/checkbox_26.png" alt="checkbox_26.png">
+                            <div>1/5</div>
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>2</div>
+                            <img src="./img/comments_26.png" alt="comments_26.png">
+                            <div>3</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_1.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing.
+                    </div>
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/checkbox_26.png" alt="checkbox_26.png">
+                            <div>0/3</div>
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>7</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum mollitia eum voluptatem?
+                    </div>
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/checkbox_26.png" alt="checkbox_26.png">
+                            <div>1/5</div>
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>2</div>
+                            <img src="./img/comments_26.png" alt="comments_26.png">
+                            <div>3</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_1.png">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+
+            <div class="div-board">
+                <h2>Test</h2>
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </div>
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/checkbox_26.png" alt="checkbox_26.png">
+                            <div>4/8</div>
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>2</div>
+                            <img src="./img/comments_26.png" alt="comments_26.png">
+                            <div>4</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_1.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor sit amet consectetur.
+                    </div>
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>2</div>
+                            <img src="./img/comments_26.png" alt="comments_26.png">
+                            <div>14</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aperiam consequuntur illo?
+                    </div>
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/checkbox_26.png" alt="checkbox_26.png">
+                            <div>1/5</div>
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>2</div>
+                            <img src="./img/comments_26.png" alt="comments_26.png">
+                            <div>3</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_1.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div-board">
+                <h2>Fix</h2>
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias totam eveniet deleniti id eaque.
+                    </div>
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/checkbox_26.png" alt="checkbox_26.png">
+                            <div>4/8</div>
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>2</div>
+                            <img src="./img/comments_26.png" alt="comments_26.png">
+                            <div>4</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati?
+                    </div>
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>2</div>
+                            <img src="./img/comments_26.png" alt="comments_26.png">
+                            <div>14</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, placeat.
+                    </div>
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/checkbox_26.png" alt="checkbox_26.png">
+                            <div>0/3</div>
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>7</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-task">
+                    <div class="task-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum mollitia eum voluptatem?
+                    </div>
+                    <div class="task-footer">
+                        <div class="footer-icons">
+                            <img src="./img/justify_26.png" alt="justify_26.png">
+                            <img src="./img/checkbox_26.png" alt="checkbox_26.png">
+                            <div>1/5</div>
+                            <img src="./img/attach_26.png" alt="attach_26.png">
+                            <div>2</div>
+                            <img src="./img/comments_26.png" alt="comments_26.png">
+                            <div>3</div>
+                        </div>
+                        <div class="footer-photo">
+                            <img src="./img/avatar_1.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 
 </html>
