@@ -10,6 +10,12 @@
             font-family: Arial, Helvetica, sans-serif;
             background-color: rgb(100, 100, 100);
             color: white;
+            margin: 0;
+            border: 2px black solid;
+        }
+
+        main {
+            margin: 40px 10%;
         }
 
         h2 {
@@ -18,8 +24,15 @@
             font-size: 20px;
         }
 
-        .box-shadow{
-            padding: 3%;
+        h3 {
+            color: black;
+            font-size: 14px;
+            text-align: left;
+            margin: 0;
+        }
+
+        .box-shadow {
+            padding: 5px;
             background-color: white;
             -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
             -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
@@ -44,11 +57,6 @@
             margin-left: 20px;
         }
 
-        .personal-info * {
-            margin: 0px;
-            padding: 0px;
-        }
-
         .personal-info strong {
             font-size: 20px;
         }
@@ -68,15 +76,76 @@
             padding: 10px;
         }
 
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
         /* First block "About me" */
         .div-about-me {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             column-gap: 15px;
         }
-        
-        .image-div img{
-            width: auto;
+
+        .image-div img {
+            box-sizing: border-box;
+            display: block;
+        }
+
+        .column3 ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .column3 ul li::before {
+            content: '- ';
+        }
+
+        /* Second block "My Last Works" */
+        .last-works-div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .last-works-div>div {
+            display: flex;
+            flex-direction: row;
+            column-gap: 10px;
+        }
+
+        .last-works-div>div:nth-child(1) img {
+            display: block;
+        }
+
+        .last-works-div>div>div {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inside-block p {
+            color: black;
+        }
+
+        .inside-block {
+            background-color: rgba(240, 248, 255, 0.753);
+            position: absolute;
+            left: 10%;
+            right: 10%;
+            top: 10%;
+            padding: 2%;
+        }
+
+        /* Third block "Instagramm" */
+        .insta-photos-div {
+            display: flex;
+            gap: 2%;
+            
+        }
+
+        .insta-photos-div img {
             display: block;
             box-sizing: border-box;
         }
@@ -84,90 +153,134 @@
 </head>
 
 <body>
-    <header>
-        <div>
-            <img src="./img/camera.png" alt="camera">
-            <div class="personal-info">
-                <div>
-                    <strong>Julia Jacobson</strong>
-                </div>
-                <div>The Photographer</div>
-            </div>
-        </div>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href=""></a>About</li>
-                    <li><a href=""></a>Works</li>
-                    <li><a href=""></a>Instagramm</li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section>
-        <h2>About Me</h2>
-        <div class="div-about-me">
-            <div class="image-div">
-                <img src="./img/img1small.jpg" alt="img" class=" box-shadow">
-            </div>
-            <div class="column2">
-                <div>
-                    My name is Julia Jacobson
-                </div>
-                <div>
-                    I am a photographer who likes everything-nature, people and travel.
-                </div>
-                <div>
-                    If you like my photos, call or write me.
-                </div>
-                <div>
-                    Email: photo.jacobson@gmail.com
-                </div>
-                <div>
-                    Phone: +01(111) 333-55-77
+    <main>
+        <header>
+            <div>
+                <img src="./img/camera.png" alt="camera">
+                <div class="personal-info">
+                    <div>
+                        <strong>Julia Jacobson</strong>
+                    </div>
+                    <div>The Photographer</div>
                 </div>
             </div>
-            <div class="column3">
-                <ul>
-                    <li>200+ happy clients</li>
-                    <li>120 portrait shoots</li>
-                    <li>600+ nature shoots</li>
-                    <li>1000+ wedding shoots</li>
-                    <li>12 countries visited</li>
-                    <li>600+ cofee drinks</li>
-                </ul>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Works</a></li>
+                        <li><a href="">Instagramm</a></li>
+                    </ul>
+                </nav>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <section>
-        <h2>My Last Works</h2>
-        <div class="last-works-div">
-            <img src="./img/img3small.jpg" alt="img" class="box-shadow">
-            <img src="./img/img2small.jpg" alt="img" class="box-shadow">
-            <img src="./img/img4mediul.jpg" alt="img" class="box-shadow">
-            <img src="./img/img5medium.jpg" alt="img" class="box-shadow">
-            <img src="./img/img6medium.jpg" alt="img" class="box-shadow">
-            <img src="./img/img7medium.jpg" alt="img" class="box-shadow">
-        </div>
-    </section>
+        <section>
+            <h2>About Me</h2>
+            <div class="div-about-me">
+                <div class="image-div">
+                    <img src="./img/img1small.jpg" alt="img" class=" box-shadow">
+                </div>
+                <div class="column2">
+                    <div>
+                        My name is Julia Jacobson
+                    </div>
+                    <div>
+                        I am a photographer who likes everything-nature, people and travel.
+                    </div>
+                    <div>
+                        If you like my photos, call or write me.
+                    </div>
+                    <div>
+                        Email: photo.jacobson@gmail.com
+                    </div>
+                    <div>
+                        Phone: +01(111) 333-55-77
+                    </div>
+                </div>
+                <div class="column3">
+                    <ul>
+                        <li>200+ happy clients</li>
+                        <li>120 portrait shoots</li>
+                        <li>600+ nature shoots</li>
+                        <li>1000+ wedding shoots</li>
+                        <li>12 countries visited</li>
+                        <li>600+ cofee drinks</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h2>Follow me on instagram</h2>
-        <div class="insta-photos-div">
-            <img src="./img/inst1.jpg" alt="img">
-            <img src="./img/inst2.jpg" alt="img">
-            <img src="./img/inst3.jpg" alt="img">
-            <img src="./img/inst4.jpg" alt="img">
-            <img src="./img/inst5.jpg" alt="img">
-            <img src="./img/inst6.jpg" alt="img">
-        </div>
-    </section>
+        <section>
+            <h2>My Last Works</h2>
+            <div class="last-works-div">
+                <div>
+                    <div class="box-shadow">
+                        <img src="./img/img5medium.jpg">
+                    </div>
+                    <div class="box-shadow">
+                        <img src="./img/img8medium.jpg">
+                    </div>
+                    <div class="box-shadow">
+                        <img src="./img/img4mediul.jpg">
+                    </div>
+                </div>
+                <div>
+                    <div class="box-shadow">
+                        <img src="./img/img5medium.jpg">
+                        <div class="inside-block">
+                            <h3>Morning coffee</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, explicabo laboriosam?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box-shadow">
+                        <img src="./img/img6medium.jpg">
+                    </div>
+                </div>
+                <div>
+                    <div class="box-shadow">
+                        <img src="./img/img7medium.jpg">
+                        <div class="inside-block">
+                            <h3>Landscape Photo</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <p>© Copyright 2018-2020 Julia Jacobson</p>
-    </footer>
+        <section>
+            <h2>Follow me on instagram</h2>
+            <div class="insta-photos-div">
+                <div>
+                    <img src="./img/inst1.jpg" alt="img" class="box-shadow">
+                </div>
+                <div>
+                    <img src="./img/inst2.jpg" alt="img" class="box-shadow">
+                </div>
+                <div>
+                    <img src="./img/inst3.jpg" alt="img" class="box-shadow">
+                </div>
+                <div>
+                    <img src="./img/inst4.jpg" alt="img" class="box-shadow">
+                </div>
+                <div>
+                    <img src="./img/inst5.jpg" alt="img" class="box-shadow">
+                </div>
+                <div>
+                    <img src="./img/inst6.jpg" alt="img" class="box-shadow">
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© Copyright 2018-2020 Julia Jacobson</p>
+        </footer>
+    </main>
 </body>
 
 </html>
