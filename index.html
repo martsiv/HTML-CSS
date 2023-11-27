@@ -8,182 +8,138 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+            padding: 0px;
+            margin: 0px;
+            background-color: rgb(242, 242, 242);
         }
 
-        .container {
-            display: grid;
-            grid-template-columns: 2fr 4fr 1fr;
-            grid-template-rows: 1fr 2fr;
-            gap: 10px;
-            align-items: center;
-            padding: 20px;
-            margin: 10px;
-            -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-        }
-
-        .container>div {
-            flex-grow: 1;
-            border-radius: 3px;
-            /* border: 2px black solid; */
-        }
-
-        .logo {
-            grid-row: span 2;
-        }
-
-        .logo img {
-            width: 100%;
-            height: auto;
-        }
-
-        .progress {
-            position: relative;
-            height: 38px;
+        main {
+            margin: 0px;
+            padding: 30px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            gap: 20px;
         }
 
-        .progress .progress-loaded {
-            position: absolute;
-            height: 100%;
-            z-index: -1;
+        .main-text {
+            flex-basis: 70%;
         }
 
-        .progress-loaded {
-            background-color: rgb(209, 209, 220);
-            left: 0%;
-            width: 45%;
+        .menu-div {
+            display: flex;
+            flex-direction: column;
+            gap: 20px
         }
 
-        .done-alert {
-            display: block;
-            height: 38px;
-            background-color: rgb(51, 51, 194);
+        .menu-div>ul {
+            list-style: none;
+            padding: 0;
+            background-color: rgb(176, 196, 223);
+            border-radius: 5px;
+        }
+
+        .menu-div>ul li {
+            padding: 10px;
+            border-top: 1px solid rgb(55, 81, 107);
+        }
+
+        .menu-div>ul li:first-child {
+            background-color: rgb(55, 81, 107);
             color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .menu-div>ul li:last-child {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 800px) {
+            main {
+                flex-direction: column;
+            }
+
+            .menu-div {
+                flex-direction: row;
+                justify-self: stretch;
+            }
+
+            .menu-div>ul {
+                flex-grow: 1;
+            }
         }
 
         @media screen and (max-width: 600px) {
-            .container{
-                grid-template-columns: 1fr;
+            main {
+                flex-direction: column;
             }
-            .done-alert{
-                order: 4;
+
+            .menu-div {
+                flex-direction: column;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="./img/download.png">
+    <main>
+        <div class="main-text">
+            <h2>
+                Introduction
+            </h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus quas molestiae quibusdam, doloribus
+                nesciunt distinctio iure minus voluptates. Dicta ducimus quo illum maiores, sint alias tenetur sapiente
+                similique, impedit laudantium cumque. Eaque quaerat ad debitis perferendis libero, voluptas dolor vitae
+                fugit et nam nobis placeat voluptatum unde odio harum, quidem odit optio exercitationem. A porro magnam
+                sed! Dolorem dignissimos minima, amet corporis quo, optio iure nobis, asperiores harum id vitae
+                voluptatum commodi repudiandae suscipit inventore velit veniam? Accusamus qui tempora doloribus ullam.
+                Illo accusamus nisi nostrum eos? Eum nulla nam quis eius?
+            </p>
+            <h2>
+                Additional information
+            </h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti laborum quibusdam dolorem deserunt
+                laudantium in recusandae praesentium. Exercitationem possimus sapiente, facilis, vero eaque nobis optio
+                voluptatum voluptates non tempora eum necessitatibus a nostrum? Quas neque dolore amet beatae rem et quo
+                est facere placeat harum maxime sed adipisci velit ex, accusantium assumenda illo tempora. Quasi numquam
+                ab fugit officia, illum debitis, harum voluptatum excepturi nihil, quod ea explicabo perspiciatis nobis
+                vitae quam praesentium sequi cupiditate delectus? At placeat veritatis fugiat expedita natus quam
+                recusandae delectus magnam dolor error incidunt repellat voluptate debitis, impedit similique hic ullam
+                doloremque voluptatem ipsam culpa exercitationem tempora illum saepe totam! Similique voluptate fuga
+                esse atque error quae provident adipisci repellat incidunt. Voluptatum facere impedit fugit eaque,
+                repudiandae sunt cupiditate!
+            </p>
         </div>
-        <div class="progress">
-            <div class="progress-loaded"></div>
-            <div>
-                UPLOADING 40%
-            </div>
-            <div>
-                About 23 minutes remaining
-            </div>
+        <div class="menu-div">
+            <ul class="actions">
+                <li>
+                    Actions
+                </li>
+                <li>
+                    Harum voluptatum excepturi nihil.
+                </li>
+                <li>
+                    Magnam dolor error incidunt.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet consectetur.
+                </li>
+            </ul>
+            <ul class="plans">
+                <li>
+                    Plans
+                </li>
+                <li>
+                    Voluptate debitis, impedit similique.
+                </li>
+                <li>
+                    Sed adipisci velit ex, accusantium.
+                </li>
+            </ul>
         </div>
-        <button class="done-alert">
-            Done
-        </button>
-        <div class="text-info">
-            <h3>
-                Title of video
-            </h3>
-            <div>
-                * Your video is still uploading. Please keep this page open untillt's done.
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="logo">
-            <img src="./img/download.png">
-        </div>
-        <div class="progress">
-            <div class="progress-loaded"></div>
-            <div>
-                UPLOADING 40%
-            </div>
-            <div>
-                About 23 minutes remaining
-            </div>
-        </div>
-        <button class="done-alert">
-            Done
-        </button>
-        <div class="text-info">
-            <h3>
-                Title of video
-            </h3>
-            <div>
-                * Your video is still uploading. Please keep this page open untillt's done.
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="logo">
-            <img src="./img/download.png">
-        </div>
-        <div class="progress">
-            <div class="progress-loaded"></div>
-            <div>
-                UPLOADING 40%
-            </div>
-            <div>
-                About 23 minutes remaining
-            </div>
-        </div>
-        <button class="done-alert">
-            Done
-        </button>
-        <div class="text-info">
-            <h3>
-                Title of video
-            </h3>
-            <div>
-                * Your video is still uploading. Please keep this page open untillt's done.
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="logo">
-            <img src="./img/download.png">
-        </div>
-        <div class="progress">
-            <div class="progress-loaded"></div>
-            <div>
-                UPLOADING 40%
-            </div>
-            <div>
-                About 23 minutes remaining
-            </div>
-        </div>
-        <button class="done-alert">
-            Done
-        </button>
-        <div class="text-info">
-            <h3>
-                Title of video
-            </h3>
-            <div>
-                * Your video is still uploading. Please keep this page open untillt's done.
-            </div>
-        </div>
-    </div>
+    </main>
 </body>
 
 </html>
