@@ -24,10 +24,11 @@ $font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: $fontDark;
 }
 
-@mixin flex($dir, $side) {
+@mixin flex($dir, $side, $align: flex-start) {
     display: flex;
     flex-direction: $dir;
     justify-content: $side;
+    align-items: $align;
 }
 
 @mixin border($col, $perc) {
@@ -154,7 +155,48 @@ header {
 }
 
 #features {
-    @include reset();
-    @include colorDark();
     padding: $indentV $indent;
+    h2 {
+        text-align: center;
+    }
+
+    >div {
+        @include flex(row, space-between);
+        gap: 10px;
+        >div{
+            width: 20vw;
+            height: auto;
+            @include flex(column, space-between, center);
+            @include border($fontLight, 20%);
+            padding: 5vh 0px;
+            gap: 10px;
+            >div{
+                @include flex(column, space-between, center);
+                img{
+                    height: 80px;
+                    width: auto;
+                }
+                .top-text{
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+
+#prices{
+    @include reset();
+    @include colorLight();
+    padding: $indentV $indent;
+    @include flex(column, flex-start, center);
+    h2 {
+        text-align: center;
+    }
+    div.prices-body{
+        @include flex(row, space-between);
+        div.prices-item{
+            @include flex(column, space-between, center);
+            @include border($fontDark, 20%);
+        }
+    }
 }

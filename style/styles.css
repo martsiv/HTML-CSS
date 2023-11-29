@@ -12,6 +12,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
   background-color: #282f79;
   color: #dfe1f4;
   padding: 1vh 4vw;
@@ -55,6 +56,7 @@ header nav ul li a:hover, header nav ul li a.active {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   height: 80vh;
   padding: 4vw;
   background-image: url(../images/bg_header.jpg);
@@ -106,6 +108,7 @@ header nav ul li a:hover, header nav ul li a.active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
 }
 #services > div ol {
   padding: 0;
@@ -119,10 +122,74 @@ header nav ul li a:hover, header nav ul li a.active {
 }
 
 #features {
+  padding: 1vh 4vw;
+}
+#features h2 {
+  text-align: center;
+}
+#features > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+#features > div > div {
+  width: 20vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #eee;
+  border-radius: 20% 0;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  padding: 5vh 0px;
+  gap: 10px;
+}
+#features > div > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#features > div > div > div img {
+  height: 80px;
+  width: auto;
+}
+#features > div > div > div .top-text {
+  font-size: 28px;
+}
+
+#prices {
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: #282f79;
-  color: #dfe1f4;
+  background-color: #dfe1f4;
+  color: #284e79;
   padding: 1vh 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#prices h2 {
+  text-align: center;
+}
+#prices div.prices-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#prices div.prices-body div.prices-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #284e79;
+  border-radius: 20% 0;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
 }/*# sourceMappingURL=styles.css.map */
