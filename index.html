@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-    
+    <header class="container-fluid d-flex justify-content-between align-items-center bg-secondary-subtle px-4 py-1">
+        <div class="container d-flex gap-3">
+            <div class="rounded myLogo">
+                <img src="./images/ad.png" class="width" width="50px" height="auto">
+            </div>
+            <h2 class="text-uppercase">
+                Ad's board
+            </h2>
+        </div>
+        <div class="container d-flex gap-3 align-items-center justify-content-end">
+            <button class="btn btn-warning fw-bolder">
+                + New add
+            </button>
+            <a href="#" class="d-flex align-items-center link-underline link-underline-opacity-0">
+                <img src="./images/av_64.png" alt="">
+                <div>My profile</div>
+            </a>
+        </div>
+    </header>
+
+    <div class="mx-5 my-4">
+        <form class="row row-cols-lg-auto g-3 align-items-center bg-primary-subtle p-2">
+            <div class="col-12">
+              <label class="visually-hidden" for="inlineFormInputGroupUsername">11999345 ads near you</label>
+              <div class="input-group">
+                <div class="input-group-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                  </svg>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+              </div>
+            </div>
+          
+            <div class="col-12">
+              <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+              <select class="form-select" id="inlineFormSelectPref">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+    </div>
+
+    <footer class="mx-4">
+
+    </footer>
 </body>
+
 </html>
